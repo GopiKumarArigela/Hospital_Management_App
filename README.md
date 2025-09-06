@@ -135,3 +135,10 @@ Bootstrap → Responsive UI
 
 JWT → Authentication & authorization
 
+📌 Future Enhancements
+
+Payment gateway integration (Stripe/PayPal)
+
+Docker & Kubernetes deployment
+
+Cloud deployment on AWS/GCP/Azure
