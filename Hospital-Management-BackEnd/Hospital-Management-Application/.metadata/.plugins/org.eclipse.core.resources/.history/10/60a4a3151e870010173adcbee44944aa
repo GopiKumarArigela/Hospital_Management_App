@@ -1,5 +1,0 @@
-package com.surya.medicalRecords.repository;
-
-public interface MedicalRecordRepository {
-
-}

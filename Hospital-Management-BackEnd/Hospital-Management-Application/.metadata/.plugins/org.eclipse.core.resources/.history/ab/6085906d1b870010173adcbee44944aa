@@ -1,5 +1,0 @@
-package com.surya.patient.repository;
-
-public interface PatientRepository {
-
-}

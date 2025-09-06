@@ -1,5 +1,0 @@
-package com.surya.appointment.repository;
-
-public interface AppointmentRepository {
-
-}

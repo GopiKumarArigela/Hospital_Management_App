@@ -1,5 +1,0 @@
-package com.surya.appointment.service;
-
-public interface AppointmentService {
-
-}

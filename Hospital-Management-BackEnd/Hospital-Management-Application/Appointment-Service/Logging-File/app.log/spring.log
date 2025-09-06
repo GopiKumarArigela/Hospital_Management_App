@@ -29,7 +29,7 @@
 	Maximum pool size: undefined/unknown
 2025-09-01T16:58:03.462+05:30  INFO 4968 --- [Appointment-Service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-09-01T16:58:03.525+05:30  INFO 4968 --- [Appointment-Service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-01T16:58:03.892+05:30  WARN 4968 --- [Appointment-Service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appointmentController': Unsatisfied dependency expressed through field 'patientClient': No qualifying bean of type 'com.surya.appointment.feign.PatientClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-09-01T16:58:03.892+05:30  WARN 4968 --- [Appointment-Service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appointmentController': Unsatisfied dependency expressed through field 'patientClient': No qualifying bean of type 'com.gk.appointment.feign.PatientClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2025-09-01T16:58:03.893+05:30  INFO 4968 --- [Appointment-Service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-09-01T16:58:03.899+05:30  INFO 4968 --- [Appointment-Service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-09-01T16:58:03.911+05:30  INFO 4968 --- [Appointment-Service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -45,7 +45,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field patientClient in com.surya.appointment.controller.AppointmentController required a bean of type 'com.surya.appointment.feign.PatientClient' that could not be found.
+Field patientClient in com.gk.appointment.controller.AppointmentController required a bean of type 'com.gk.appointment.feign.PatientClient' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -53,7 +53,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.surya.appointment.feign.PatientClient' in your configuration.
+Consider defining a bean of type 'com.gk.appointment.feign.PatientClient' in your configuration.
 
 2025-09-01T16:58:53.787+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] c.s.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 21.0.7 with PID 8324 (E:\STS Workspace\Appointment-Service\target\classes started by asus in E:\STS Workspace\Appointment-Service)
 2025-09-01T16:58:53.792+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] c.s.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
@@ -86,7 +86,7 @@ Consider defining a bean of type 'com.surya.appointment.feign.PatientClient' in 
 	Maximum pool size: undefined/unknown
 2025-09-01T16:58:58.172+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-09-01T16:58:58.254+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-01T16:58:58.650+05:30  WARN 8324 --- [Appointment-Service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appointmentController': Unsatisfied dependency expressed through field 'patientClient': No qualifying bean of type 'com.surya.appointment.feign.PatientClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-09-01T16:58:58.650+05:30  WARN 8324 --- [Appointment-Service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appointmentController': Unsatisfied dependency expressed through field 'patientClient': No qualifying bean of type 'com.gk.appointment.feign.PatientClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2025-09-01T16:58:58.651+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-09-01T16:58:58.654+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-09-01T16:58:58.664+05:30  INFO 8324 --- [Appointment-Service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -102,7 +102,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field patientClient in com.surya.appointment.controller.AppointmentController required a bean of type 'com.surya.appointment.feign.PatientClient' that could not be found.
+Field patientClient in com.gk.appointment.controller.AppointmentController required a bean of type 'com.gk.appointment.feign.PatientClient' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -110,7 +110,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.surya.appointment.feign.PatientClient' in your configuration.
+Consider defining a bean of type 'com.gk.appointment.feign.PatientClient' in your configuration.
 
 2025-09-01T17:00:18.171+05:30  INFO 14384 --- [Appointment-Service] [restartedMain] c.s.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 21.0.7 with PID 14384 (E:\STS Workspace\Appointment-Service\target\classes started by asus in E:\STS Workspace\Appointment-Service)
 2025-09-01T17:00:18.173+05:30  INFO 14384 --- [Appointment-Service] [restartedMain] c.s.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
@@ -185,7 +185,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8087/api/
 	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.jar:na]
 	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.jar:na]
 	at jdk.proxy4/jdk.proxy4.$Proxy147.getDoctorById(Unknown Source) ~[na:na]
-	at com.surya.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:34) ~[classes/:na]
+	at com.gk.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:34) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
@@ -777,7 +777,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8087/api/
 	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.jar:na]
 	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.jar:na]
 	at jdk.proxy5/jdk.proxy5.$Proxy169.getDoctorById(Unknown Source) ~[na:na]
-	at com.surya.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:34) ~[classes/:na]
+	at com.gk.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:34) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
@@ -1540,7 +1540,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8088/api/
 	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.jar:na]
 	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.jar:na]
 	at jdk.proxy4/jdk.proxy4.$Proxy146.getPatientById(Unknown Source) ~[na:na]
-	at com.surya.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:33) ~[classes/:na]
+	at com.gk.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:33) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
@@ -1606,7 +1606,7 @@ feign.FeignException$Unauthorized: [401] during [GET] to [http://localhost:8087/
 	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.jar:na]
 	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.jar:na]
 	at jdk.proxy4/jdk.proxy4.$Proxy147.getDoctorById(Unknown Source) ~[na:na]
-	at com.surya.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:34) ~[classes/:na]
+	at com.gk.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:34) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
@@ -1670,7 +1670,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8088/api/
 	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.jar:na]
 	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.jar:na]
 	at jdk.proxy4/jdk.proxy4.$Proxy146.getPatientById(Unknown Source) ~[na:na]
-	at com.surya.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:33) ~[classes/:na]
+	at com.gk.appointment.controller.AppointmentController.bookAppointment(AppointmentController.java:33) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.10.jar:6.2.10]
