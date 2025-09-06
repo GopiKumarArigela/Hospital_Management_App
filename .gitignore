@@ -1,0 +1,30 @@
+# ===== Java / Maven / Gradle ===== 
+target/ 
+build/ 
+out/ 
+*.class 
+*.jar 
+*.war 
+*.ear 
+.gradle/ 
+.mvn/ 
+ 
+# ===== IDE / Editors ===== 
+.metadata/ 
+*.iml 
+.idea/ 
+.vscode/ 
+ 
+# ===== Logs ===== 
+*.log 
+ 
+# ===== Node / Angular / React ===== 
+node_modules/ 
+dist/ 
+ 
+# ===== Env (secrets) ===== 
+.env 
+ 
+# ===== OS / Misc ===== 
+.DS_Store 
+Thumbs.db 
