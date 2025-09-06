@@ -1,0 +1,1323 @@
+2025-08-22T10:07:26.843+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.7 with PID 15096 (C:\Users\asus\Desktop\UserAuth-Server\target\classes started by asus in C:\Users\asus\Desktop\UserAuth-Server)
+2025-08-22T10:07:26.852+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T10:07:26.911+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-22T10:07:26.911+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-22T10:07:27.803+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-22T10:07:27.861+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2025-08-22T10:07:28.571+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-22T10:07:28.583+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-22T10:07:28.584+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-08-22T10:07:28.628+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-22T10:07:28.628+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1716 ms
+2025-08-22T10:07:28.905+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-22T10:07:28.969+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.8.Final
+2025-08-22T10:07:29.003+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-22T10:07:29.231+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-22T10:07:29.259+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-22T10:07:29.550+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b7051ef
+2025-08-22T10:07:29.551+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-22T10:07:30.398+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-22T10:07:30.467+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T10:07:30.946+05:30 DEBUG 15096 --- [CarerOutfit-Server] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-08-22T10:07:31.084+05:30  WARN 15096 --- [CarerOutfit-Server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-22T10:07:31.545+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2025-08-22T10:07:31.651+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41b17d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1200eccd, org.springframework.security.web.context.SecurityContextHolderFilter@54fa1619, org.springframework.security.web.header.HeaderWriterFilter@118a6eda, org.springframework.web.filter.CorsFilter@1fd2ce20, org.springframework.security.web.authentication.logout.LogoutFilter@3f025951, com.surya.rk.config.JwtAuthenticationFilter@1c5fe6d9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2cf9899a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15bf4967, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d3912a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cb330c8, org.springframework.security.web.session.SessionManagementFilter@7dac0d87, org.springframework.security.web.access.ExceptionTranslationFilter@4bcb9f64, org.springframework.security.web.access.intercept.AuthorizationFilter@46ab79fc]
+2025-08-22T10:07:32.080+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-22T10:07:32.136+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-22T10:07:32.148+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 5.669 seconds (process running for 6.364)
+2025-08-22T10:10:58.326+05:30  INFO 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-22T10:10:58.327+05:30  INFO 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-22T10:10:58.330+05:30  INFO 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-22T10:10:58.507+05:30  WARN 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.surya.rk.controller.auth.AuthController.signupUser(com.surya.rk.dto.SignupRequest): [Field error in object 'signupRequest' on field 'password': rejected value [testUser]; codes [Pattern.signupRequest.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [signupRequest.password,password]; arguments []; default message [password],[Ljakarta.validation.constraints.Pattern$Flag;@66430955,^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=*!?])[A-Za-z\d@#$%^&+=*!?]{8,20}$]; default message [Password must contain at least one uppercase, one lowercase, one digit, and one special character]] ]
+2025-08-22T10:11:40.136+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T10:11:40.144+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T10:11:40.245+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        user
+        (email, name, password, user_role) 
+    values
+        (?, ?, ?, ?)
+2025-08-22T10:15:33.700+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T10:15:53.302+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T10:15:53.380+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T10:15:53.383+05:30 DEBUG 15096 --- [CarerOutfit-Server] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T10:34:31.368+05:30  INFO 15096 --- [CarerOutfit-Server] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-22T10:34:31.380+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T10:34:31.384+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-22T10:34:31.397+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-22T10:34:31.477+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.7 with PID 15096 (C:\Users\asus\Desktop\UserAuth-Server\target\classes started by asus in C:\Users\asus\Desktop\UserAuth-Server)
+2025-08-22T10:34:31.477+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T10:34:31.775+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-22T10:34:31.789+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2025-08-22T10:34:31.947+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-22T10:34:31.948+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-22T10:34:31.948+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-08-22T10:34:31.962+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-22T10:34:31.963+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 484 ms
+2025-08-22T10:34:32.231+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-22T10:34:32.234+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-22T10:34:32.238+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-22T10:34:32.239+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-22T10:34:32.256+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b72020e
+2025-08-22T10:34:32.256+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-22T10:34:32.330+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-22T10:34:32.352+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T10:34:32.556+05:30 DEBUG 15096 --- [CarerOutfit-Server] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-08-22T10:34:32.634+05:30  WARN 15096 --- [CarerOutfit-Server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-22T10:34:32.958+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2025-08-22T10:34:33.021+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40863557, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1679cc03, org.springframework.security.web.context.SecurityContextHolderFilter@23d4d258, org.springframework.security.web.header.HeaderWriterFilter@20be3f6, org.springframework.web.filter.CorsFilter@6b8eae85, org.springframework.security.web.authentication.logout.LogoutFilter@49fe7ef3, com.surya.rk.config.JwtAuthenticationFilter@6bce6222, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1b69b81c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76c6bf92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@711ec665, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c8f8206, org.springframework.security.web.session.SessionManagementFilter@764c369, org.springframework.security.web.access.ExceptionTranslationFilter@8021b0f, org.springframework.security.web.access.intercept.AuthorizationFilter@79dc0674]
+2025-08-22T10:34:33.336+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-22T10:34:33.358+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-22T10:34:33.366+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 1.915 seconds (process running for 1627.583)
+2025-08-22T10:34:33.374+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-22T11:01:41.986+05:30  INFO 15096 --- [CarerOutfit-Server] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-22T11:01:41.994+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T11:01:41.994+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-22T11:01:41.999+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-22T11:01:42.069+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.7 with PID 15096 (C:\Users\asus\Desktop\UserAuth-Server\target\classes started by asus in C:\Users\asus\Desktop\UserAuth-Server)
+2025-08-22T11:01:42.070+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T11:01:42.340+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-22T11:01:42.358+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-08-22T11:01:42.535+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-22T11:01:42.536+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-22T11:01:42.537+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-08-22T11:01:42.551+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-22T11:01:42.551+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 478 ms
+2025-08-22T11:01:42.729+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-22T11:01:42.731+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-22T11:01:42.734+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-22T11:01:42.735+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-22T11:01:42.748+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f821ecd
+2025-08-22T11:01:42.748+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-22T11:01:42.802+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-22T11:01:42.817+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T11:01:42.960+05:30 DEBUG 15096 --- [CarerOutfit-Server] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-08-22T11:01:43.021+05:30  WARN 15096 --- [CarerOutfit-Server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-22T11:01:43.295+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2025-08-22T11:01:43.359+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a0aefec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6502ea48, org.springframework.security.web.context.SecurityContextHolderFilter@2c2d08cd, org.springframework.security.web.header.HeaderWriterFilter@ed35b48, org.springframework.web.filter.CorsFilter@378f1440, org.springframework.security.web.authentication.logout.LogoutFilter@7cb16058, com.surya.rk.config.JwtAuthenticationFilter@780c4dd0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@317bc396, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69869b97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f1e1953, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@591e9052, org.springframework.security.web.session.SessionManagementFilter@37d5d782, org.springframework.security.web.access.ExceptionTranslationFilter@46e11a14, org.springframework.security.web.access.intercept.AuthorizationFilter@fef1b]
+2025-08-22T11:01:43.673+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-22T11:01:43.700+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-22T11:01:43.710+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 1.662 seconds (process running for 3257.927)
+2025-08-22T11:01:43.713+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-22T11:30:23.519+05:30  INFO 15096 --- [CarerOutfit-Server] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-22T11:30:23.526+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T11:30:23.527+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-08-22T11:30:23.531+05:30  INFO 15096 --- [CarerOutfit-Server] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-08-22T11:30:23.608+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.7 with PID 15096 (C:\Users\asus\Desktop\UserAuth-Server\target\classes started by asus in C:\Users\asus\Desktop\UserAuth-Server)
+2025-08-22T11:30:23.609+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T11:30:23.873+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-22T11:30:23.886+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2025-08-22T11:30:24.050+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-22T11:30:24.052+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-22T11:30:24.052+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-08-22T11:30:24.069+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-22T11:30:24.069+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 457 ms
+2025-08-22T11:30:24.207+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-22T11:30:24.210+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-22T11:30:24.213+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-22T11:30:24.214+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-08-22T11:30:24.227+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f5ac923
+2025-08-22T11:30:24.227+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-08-22T11:30:24.276+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-22T11:30:24.291+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T11:30:24.421+05:30 DEBUG 15096 --- [CarerOutfit-Server] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-08-22T11:30:24.475+05:30  WARN 15096 --- [CarerOutfit-Server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-22T11:30:24.757+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2025-08-22T11:30:24.819+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7929eca5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@302e647a, org.springframework.security.web.context.SecurityContextHolderFilter@468fafe0, org.springframework.security.web.header.HeaderWriterFilter@30daea7b, org.springframework.web.filter.CorsFilter@79e00e56, org.springframework.security.web.authentication.logout.LogoutFilter@3722f010, com.surya.rk.config.JwtAuthenticationFilter@10635c84, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7747c123, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8deaecb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65ad1905, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a22c6e5, org.springframework.security.web.session.SessionManagementFilter@4c8838c7, org.springframework.security.web.access.ExceptionTranslationFilter@2c89ec1d, org.springframework.security.web.access.intercept.AuthorizationFilter@5e957fd6]
+2025-08-22T11:30:25.215+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-22T11:30:25.239+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-22T11:30:25.248+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 1.664 seconds (process running for 4979.465)
+2025-08-22T11:30:25.252+05:30  INFO 15096 --- [CarerOutfit-Server] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-22T11:30:25.361+05:30  INFO 15096 --- [CarerOutfit-Server] [RMI TCP Connection(106)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-08-22T11:30:25.366+05:30  INFO 15096 --- [CarerOutfit-Server] [RMI TCP Connection(106)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T11:30:25.367+05:30  INFO 15096 --- [CarerOutfit-Server] [RMI TCP Connection(106)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-08-22T11:30:25.371+05:30  INFO 15096 --- [CarerOutfit-Server] [RMI TCP Connection(106)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-08-22T14:03:57.733+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.7 with PID 8452 (C:\Users\asus\Desktop\UserAuth-Server\target\classes started by asus in C:\Users\asus\Desktop\UserAuth-Server)
+2025-08-22T14:03:57.734+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T14:03:57.777+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9092
+2025-08-22T14:03:57.777+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=USER-AUTHENTICATION-SERVICE, profiles=[default], label=null, version=14dadc3e11ddbe0225635e5e5bfece5c2269a127, state=
+2025-08-22T14:03:57.779+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-22T14:03:57.780+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-22T14:03:58.730+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-22T14:03:58.864+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 2 JPA repository interfaces.
+2025-08-22T14:03:59.117+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ccbf0f7-aabf-3f60-a20b-db5d79332e50
+2025-08-22T14:03:59.637+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-08-22T14:03:59.650+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-22T14:03:59.650+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-22T14:03:59.693+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-22T14:03:59.694+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1913 ms
+2025-08-22T14:03:59.945+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-22T14:03:59.987+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-22T14:04:00.015+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-22T14:04:00.236+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-22T14:04:00.261+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-22T14:04:00.544+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61c6226e
+2025-08-22T14:04:00.546+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-22T14:04:00.620+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-22T14:04:01.381+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-22T14:04:01.441+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T14:04:01.890+05:30 DEBUG 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-08-22T14:04:01.984+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-08-22T14:04:02.029+05:30  WARN 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-22T14:04:02.477+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-08-22T14:04:03.026+05:30  WARN 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-22T14:04:03.053+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-08-22T14:04:03.103+05:30  WARN 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-22T14:04:03.177+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-08-22T14:04:03.202+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-08-22T14:04:03.207+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-08-22T14:04:03.216+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-08-22T14:04:03.453+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-08-22T14:04:03.455+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-08-22T14:04:03.457+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-08-22T14:04:03.458+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1755851643458 with initial instances count: 4
+2025-08-22T14:04:03.463+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-AUTHENTICATION-SERVICE with eureka with status UP
+2025-08-22T14:04:03.464+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1755851643464, current=UP, previous=STARTING]
+2025-08-22T14:04:03.465+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/DESKTOP-GVALKHS.mshome.net:USER-AUTHENTICATION-SERVICE:8087: registering service...
+2025-08-22T14:04:03.484+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-08-22T14:04:03.485+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-08-22T14:04:03.504+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 7.533 seconds (process running for 8.282)
+2025-08-22T14:04:03.506+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/DESKTOP-GVALKHS.mshome.net:USER-AUTHENTICATION-SERVICE:8087 - registration status: 204
+2025-08-22T14:05:14.726+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-22T14:05:14.727+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-22T14:05:14.730+05:30  INFO 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-22T14:05:32.673+05:30 DEBUG 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T14:05:32.679+05:30 DEBUG 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T14:05:32.775+05:30 DEBUG 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        user
+        (email, name, password, user_role) 
+    values
+        (?, ?, ?, ?)
+2025-08-22T14:05:35.785+05:30 DEBUG 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T14:05:38.379+05:30 DEBUG 8452 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T15:14:33.141+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.7 with PID 11352 (C:\Users\asus\Desktop\UserAuth-Server\target\classes started by asus in C:\Users\asus\Desktop\UserAuth-Server)
+2025-08-22T15:14:33.143+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T15:14:33.187+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9092
+2025-08-22T15:14:33.188+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=USER-AUTHENTICATION-SERVICE, profiles=[default], label=null, version=14dadc3e11ddbe0225635e5e5bfece5c2269a127, state=
+2025-08-22T15:14:33.188+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-22T15:14:33.189+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-22T15:14:34.173+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-22T15:14:34.294+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2025-08-22T15:14:34.523+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ccbf0f7-aabf-3f60-a20b-db5d79332e50
+2025-08-22T15:14:34.958+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-08-22T15:14:34.970+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-22T15:14:34.971+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-22T15:14:35.012+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-22T15:14:35.013+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1823 ms
+2025-08-22T15:14:35.254+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-22T15:14:35.294+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-22T15:14:35.321+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-22T15:14:35.554+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-22T15:14:35.579+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-22T15:14:35.901+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e0b8c42
+2025-08-22T15:14:35.903+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-22T15:14:35.983+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-22T15:14:36.716+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-22T15:14:36.802+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T15:14:37.191+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-08-22T15:14:37.270+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-08-22T15:14:37.313+05:30  WARN 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-22T15:14:37.703+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-08-22T15:14:38.188+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-22T15:14:38.226+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-08-22T15:14:38.264+05:30  WARN 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-22T15:14:38.332+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-08-22T15:14:38.354+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-08-22T15:14:38.358+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:14:38.365+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-08-22T15:14:38.365+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-08-22T15:14:38.365+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-08-22T15:14:38.365+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-08-22T15:14:38.365+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-08-22T15:14:38.365+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-08-22T15:14:38.366+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-08-22T15:14:38.581+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-08-22T15:14:38.582+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-08-22T15:14:38.584+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-08-22T15:14:38.587+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1755855878586 with initial instances count: 2
+2025-08-22T15:14:38.594+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-AUTHENTICATION-SERVICE with eureka with status UP
+2025-08-22T15:14:38.595+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1755855878595, current=UP, previous=STARTING]
+2025-08-22T15:14:38.596+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/DESKTOP-GVALKHS.mshome.net:USER-AUTHENTICATION-SERVICE:8087: registering service...
+2025-08-22T15:14:38.622+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-08-22T15:14:38.623+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-08-22T15:14:38.644+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/DESKTOP-GVALKHS.mshome.net:USER-AUTHENTICATION-SERVICE:8087 - registration status: 204
+2025-08-22T15:14:38.646+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 7.189 seconds (process running for 8.019)
+2025-08-22T15:18:49.531+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-22T15:18:49.532+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-22T15:18:49.534+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-22T15:18:49.726+05:30  WARN 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.surya.rk.controller.auth.AuthController.signupUser(com.surya.rk.dto.SignupRequest): [Field error in object 'signupRequest' on field 'password': rejected value [ravikumar@123]; codes [Pattern.signupRequest.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [signupRequest.password,password]; arguments []; default message [password],[Ljakarta.validation.constraints.Pattern$Flag;@438e32c8,^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=*!?])[A-Za-z\d@#$%^&+=*!?]{8,20}$]; default message [Password must contain at least one uppercase, one lowercase, one digit, and one special character]] ]
+2025-08-22T15:19:14.449+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T15:19:14.457+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T15:19:14.579+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        user
+        (email, name, password, user_role) 
+    values
+        (?, ?, ?, ?)
+2025-08-22T15:19:38.382+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:20:23.620+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T15:20:23.624+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T15:20:23.698+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        user
+        (email, name, password, user_role) 
+    values
+        (?, ?, ?, ?)
+2025-08-22T15:20:31.882+05:30 DEBUG 11352 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-08-22T15:24:38.384+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:29:38.395+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:34:38.406+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:39:38.408+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:44:38.421+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-08-22T15:46:51.282+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-08-22T15:46:51.283+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-AUTHENTICATION-SERVICE with eureka with status DOWN
+2025-08-22T15:46:51.283+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1755857811283, current=DOWN, previous=UP]
+2025-08-22T15:46:51.283+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/DESKTOP-GVALKHS.mshome.net:USER-AUTHENTICATION-SERVICE:8087: registering service...
+2025-08-22T15:46:51.286+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-22T15:46:51.291+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-22T15:46:51.299+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-22T15:46:51.304+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/DESKTOP-GVALKHS.mshome.net:USER-AUTHENTICATION-SERVICE:8087 - registration status: 204
+2025-08-22T15:46:51.304+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-22T15:46:51.309+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-22T15:46:51.310+05:30  INFO 11352 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(43)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-09-04T15:07:06.471+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Starting CarerOutfitServerApplication using Java 21.0.8 with PID 25544 (C:\Hospital-management-BackEnd\Hospital-Management-Application\UserAuth-Server\target\classes started by HP in C:\Hospital-management-BackEnd\Hospital-Management-Application\UserAuth-Server)
+2025-09-04T15:07:06.474+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-09-04T15:07:06.544+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:4000
+2025-09-04T15:07:06.544+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=USER-AUTHENTICATION-SERVICE, profiles=[default], label=null, version=14dadc3e11ddbe0225635e5e5bfece5c2269a127, state=
+2025-09-04T15:07:06.549+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-04T15:07:06.549+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-04T15:07:08.499+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-04T15:07:08.784+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 268 ms. Found 2 JPA repository interfaces.
+2025-09-04T15:07:09.192+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=82d0179c-0207-38c3-9289-e68672e2152b
+2025-09-04T15:07:09.939+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-09-04T15:07:09.961+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-04T15:07:09.962+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-04T15:07:10.050+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-04T15:07:10.050+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3500 ms
+2025-09-04T15:07:10.569+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-04T15:07:10.675+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-04T15:07:10.734+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-04T15:07:11.170+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-04T15:07:11.227+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-04T15:07:11.764+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c94da0a
+2025-09-04T15:07:11.766+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-04T15:07:11.929+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-04T15:07:13.252+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-04T15:07:13.459+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-04T15:07:14.165+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.user_role=?
+2025-09-04T15:07:14.328+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-04T15:07:14.425+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-04T15:07:15.247+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-09-04T15:07:16.386+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-04T15:07:16.469+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-09-04T15:07:16.552+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-09-04T15:07:16.674+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-09-04T15:07:16.710+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-09-04T15:07:16.715+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-09-04T15:07:16.732+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-09-04T15:07:17.115+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-09-04T15:07:17.118+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-09-04T15:07:17.120+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-09-04T15:07:17.122+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1756978637121 with initial instances count: 2
+2025-09-04T15:07:17.127+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-AUTHENTICATION-SERVICE with eureka with status UP
+2025-09-04T15:07:17.130+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1756978637130, current=UP, previous=STARTING]
+2025-09-04T15:07:17.132+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087: registering service...
+2025-09-04T15:07:17.167+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-09-04T15:07:17.168+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-09-04T15:07:17.194+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [restartedMain] c.surya.rk.CarerOutfitServerApplication  : Started CarerOutfitServerApplication in 12.778 seconds (process running for 14.15)
+2025-09-04T15:07:17.205+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087 - registration status: 204
+2025-09-04T15:07:17.772+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(7)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-04T15:07:17.772+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-04T15:07:17.775+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-04T15:12:16.745+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:17:16.791+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:22:16.818+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:27:16.839+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:27:48.678+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:27:48.922+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:27:48.925+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:27:50.138+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:27:50.221+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:27:50.226+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:32:16.892+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:37:16.917+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:42:16.931+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:47:16.960+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:51:28.340+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:51:28.496+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:51:28.498+05:30 DEBUG 25544 --- [USER-AUTHENTICATION-SERVICE] [http-nio-8087-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password,
+        u1_0.user_role 
+    from
+        user u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2025-09-04T15:52:17.005+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T15:57:17.011+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:02:17.034+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:07:17.041+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:12:17.043+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:17:17.044+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:22:17.066+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:27:17.083+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:32:17.085+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:37:17.089+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:42:17.092+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:47:17.094+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:52:17.100+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-09-04T16:54:53.304+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-09-04T16:54:53.307+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-09-04T16:54:53.308+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 19 more
+
+2025-09-04T16:54:53.309+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-09-04T16:54:53.335+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 23 more
+
+2025-09-04T16:54:53.335+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 20 more
+
+2025-09-04T16:54:53.336+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-09-04T16:54:53.336+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-09-04T16:54:53.336+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-09-04T16:54:53.336+05:30 ERROR 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-04T16:54:58.917+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-09-04T16:54:58.946+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-AUTHENTICATION-SERVICE with eureka with status DOWN
+2025-09-04T16:54:58.947+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1756985098947, current=DOWN, previous=UP]
+2025-09-04T16:54:58.947+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087: registering service...
+2025-09-04T16:54:58.975+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-09-04T16:54:58.975+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-09-04T16:54:58.975+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-04T16:54:58.979+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-04T16:54:59.012+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-04T16:54:59.032+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-04T16:54:59.069+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-04T16:54:59.101+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-04T16:54:59.109+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-04T16:54:59.110+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-09-04T16:55:02.117+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-09-04T16:55:02.150+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1474)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:205)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 69 more
+
+2025-09-04T16:55:02.152+05:30  WARN 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2025-09-04T16:55:02.152+05:30 ERROR 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-AUTHENTICATION-SERVICE/192.168.1.5:USER-AUTHENTICATION-SERVICE:8087 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387) ~[spring-cloud-context-4.3.0.jar:4.3.0]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134) ~[spring-cloud-context-4.3.0.jar:4.3.0]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1481) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1474) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) ~[spring-boot-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-04T16:55:02.156+05:30  INFO 25544 --- [USER-AUTHENTICATION-SERVICE] [RMI TCP Connection(119)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

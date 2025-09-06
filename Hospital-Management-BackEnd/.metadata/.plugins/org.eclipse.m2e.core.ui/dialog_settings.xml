@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\Email-Service"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\UserAuth-Server"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\Payment-Service"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\MedicalRecords-Service"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\Appointment-Service"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\Patience-Service"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\Doctor-Service"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\API-GateWay"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\Config-Server"/>
+			<item value="C:\Hospital-management-BackEnd\Hospital-Management-Application\DiscoveryServices"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
