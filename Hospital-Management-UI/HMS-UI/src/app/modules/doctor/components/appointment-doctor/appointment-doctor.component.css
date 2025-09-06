@@ -1,0 +1,53 @@
+.appointments-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f4f6fb;
+  min-height: calc(100vh - 64px);
+}
+
+.appointments-card {
+  width: 95%;
+  max-width: 1100px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+.appointments-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0a0a70;
+}
+
+.full-width-table {
+  width: 100%;
+}
+
+.records-box {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th {
+  background: #0a0a70;
+  color: white;
+  padding: 8px;
+}
+
+.records-table td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}

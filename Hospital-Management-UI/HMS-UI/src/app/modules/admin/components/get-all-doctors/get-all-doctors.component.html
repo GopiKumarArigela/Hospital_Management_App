@@ -1,0 +1,57 @@
+<app-admin-nav></app-admin-nav>
+
+<div class="doctors-container">
+  <mat-card class="doctors-card" appearance="outlined">
+    <mat-card-title class="doctors-title">Our Doctors</mat-card-title>
+    <mat-card-content>
+      <table mat-table [dataSource]="doctors" class="mat-elevation-z2 full-width-table">
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="doctorName">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.doctorName}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="doctorEmail">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.doctorEmail}} </td>
+        </ng-container>
+
+        <!-- Age Column -->
+        <ng-container matColumnDef="age">
+          <th mat-header-cell *matHeaderCellDef> Age </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.age}} </td>
+        </ng-container>
+
+        <!-- Experience Column -->
+        <ng-container matColumnDef="experience">
+          <th mat-header-cell *matHeaderCellDef> Experience (Years) </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.experience}} </td>
+        </ng-container>
+
+        <!-- Domain Column -->
+        <ng-container matColumnDef="domain">
+          <th mat-header-cell *matHeaderCellDef> Domain </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.domain}} </td>
+        </ng-container>
+
+        <!-- Gender Column -->
+        <ng-container matColumnDef="gender">
+          <th mat-header-cell *matHeaderCellDef> Gender </th>
+          <td mat-cell *matCellDef="let doctor"> {{doctor.gender}} </td>
+        </ng-container>
+
+        <!-- Header & Row Declarations -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

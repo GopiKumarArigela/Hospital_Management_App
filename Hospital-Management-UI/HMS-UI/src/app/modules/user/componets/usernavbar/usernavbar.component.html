@@ -1,0 +1,28 @@
+
+
+
+<div *ngIf="isUserLoggedIn">
+
+<div class="navbar-noauth" >
+  <mat-toolbar >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Quiz Application</span>
+    <span class="example-spacer"></span>
+      <button mat-button routerLink="/user/dashboard" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    Dashboard
+    </button>
+    <button mat-button routerLink="/user/payment" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  Do Payment
+</button>
+    <button mat-button routerLink="/admin/dashboard" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      My Activities
+    </button>
+    <button mat-button  routerLink="/login"  (click)="logout()" class="example-icon" aria-label="Example icon-button with share icon">
+      Logout
+    </button>
+  </mat-toolbar>
+
+</div>
+</div>

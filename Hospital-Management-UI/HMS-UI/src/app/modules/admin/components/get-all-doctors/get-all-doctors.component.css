@@ -1,0 +1,50 @@
+/* Full page center */
+.doctors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f6fb;
+  min-height: calc(100vh - 64px); /* navbar height adjust */
+}
+
+/* Card */
+.doctors-card {
+  width: 90%;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+/* Title */
+.doctors-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0a0a70;
+}
+
+/* Table */
+.full-width-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  background: #0a0a70;
+  color: white;
+  text-align: center;
+}
+
+.mat-cell {
+  text-align: center;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
